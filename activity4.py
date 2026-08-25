@@ -3,7 +3,7 @@
 
 #\n - new line
 #\t - tab space
-#\r
+#\r - carriage return
 #\b - backspace
 #\\ - to make double quotation
 
