@@ -1,17 +1,16 @@
 #operator = symbol
 #heehee
 
-moneytd = 19863
-fd = 19863 // 1000
-fd2 = 863 // 500
-fd3 = 363 // 200
-fd4 = 163 // 100
-fd5 = 63 // 50
-fd6 = 13 // 20
-fd7 = 13 // 10
-fd8 = 3 // 5
-fd9 = 3 // 1
+moneytd = int(input("Enter Money to Deposit:"))
 
+num1 = moneytd // 1000
+num2 = moneytd % 1000 // 500
+num3 = moneytd % 1000 % 500 // 200
+num4 = moneytd % 1000 % 500 % 200 // 100
+num5 = moneytd % 1000 % 500 % 200 % 100 // 50
+num6 = moneytd % 1000 % 500 % 200 % 100 % 50 // 20
+num7 = moneytd % 1000 % 500 % 200 % 100 % 50 % 20 // 10
+num8 = moneytd % 1000 % 500 % 200 % 100 % 50 % 20 % 10 // 5
+num9 = moneytd % 1000 % 500 % 200 % 100 % 50 % 20 % 10 % 5 // 1
 
-print("Money to Deposit:",moneytd, "\n1000 =",fd, "\n500 =", fd2, "\n200 =",fd3, "\n100 =",fd4, "\n50 =",fd5, "\n20 =",fd6, "\n10 =",fd7, "\n5 =",fd8, "\n1 =",fd9, "\nTotal Money Diposited:",moneytd)
- 
+print("\n1000 =",num1,"\n500 =",num2,"\n200 =",num3,"\n100 =",num4,"\n50 =",num5,"\n20 =",num6,"\n10 =",num7,"\n5 =",num8,"\n1 =",num9,"\n\n Total Amount of Money Deposited:",moneytd)
