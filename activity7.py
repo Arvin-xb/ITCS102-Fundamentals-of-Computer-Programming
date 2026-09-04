@@ -20,15 +20,27 @@ a = eval(input("Enter a number:"))
 total += a
 
 b = eval(input("Enter a number:"))
-total -= b
+total += b
 
 c = eval(input("Enter a number:"))
-total *= c
+total -= c
 
 d = eval(input("Enter a number:"))
-total /= d
+total -= d
 
 e = eval(input("Enter a number:"))
-total += e
+total *= e
+
+f = eval(input("Enter a number:"))
+total *= f
+
+g = eval(input("Enter a number:"))
+total /= g
+
+h = eval(input("Enter a number:"))
+total /= h
+
+i = eval(input("Enter a number:"))
+total /= i
 
 print("Current Total =", total)
