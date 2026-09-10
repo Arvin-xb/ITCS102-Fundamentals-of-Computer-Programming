@@ -21,3 +21,11 @@ dist = eval(input("Distance(km):  "))
 
 basco = (wkg * 2.50) + (dist * 0.15)
 print("The base cost of package: ₱",basco)
+
+exp = input("Express (YES / NO): ")
+if exp == Y:
+  print("Express: True")
+elif exp == N:
+  print("Express: False")
+else:
+  print(exp,"UNIDENTIFIED")
