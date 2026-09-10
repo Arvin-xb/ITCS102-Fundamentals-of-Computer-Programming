@@ -1,0 +1,23 @@
+print("==========PACKAGE DETAILS==========")
+
+Y = "YES"
+N = "NO"
+
+
+sdn = (input("\nSender Name:     "))
+top = (input("Type Of Product:   "))
+
+frag = (input("Fragile? (YES / NO): "))
+if frag == Y:
+  print("The product is Fragile")
+elif frag == N:
+  print("The product is Non-Fragile")
+else:
+  print("Unidentified")
+
+print("\n\n==========Product Details==========")
+wkg = eval(input("Weight(kg):     "))
+dist = eval(input("Distance(km):  "))
+
+basco = (wkg * 2.50) + (dist * 0.15)
+print("The base cost of package: ₱",basco)
