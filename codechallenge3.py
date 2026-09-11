@@ -1,51 +1,52 @@
 print("==========PACKAGE DETAILS==========")
-
 Y = "YES"
 N = "NO"
 
 
-sdn = (input("\nSender Name:     "))
-top = (input("Type Of Product:   "))
+sdn = (input("\nSender Name:     ")) #sender name
+top = (input("Type Of Product:   "))# type of product
 
-frag = (input("Fragile? (YES / NO): "))
+frag = (input("Fragile? (YES / NO): ")) #fragile
 if frag == Y:
-  print("The product is Fragile")
+  print("Fragile: TRUE")
 elif frag == N:
-  print("The product is Non-Fragile")
+  print("Fragile: FALSE")
 else:
-  print("Unidentified")
+  print("ANSWER UNIDENTIFIED\nTHE ANSWER SHOULD BE CAPITALIZED")
 
 print("\n\n==========Product Details==========")
-wkg = eval(input("Weight(kg):     "))
-dist = eval(input("Distance(km):  "))
+
+wkg = eval(input("Weight(kg):     ")) #weightinkg
+dist = eval(input("Distance(km):  ")) #distance
 
 basco = (wkg * 2.50) + (dist * 0.15)
-print("The base cost of package: ₱",basco)
+exp = (input("Express (YES / NO): "))
+if exp == Y:
+  print("Express: TRUE")
+elif exp == N:
+  print("Express: FALSE")
+else:
+  print(exp,"ANSWER UNIDENTIFIED")
 
-#exp = input("Express (YES / NO): ")
-#if exp == Y:
- # print("Express: True")
-#elif exp == N:
-  print("Express: False")
-#else:
-  #print(exp,"UNIDENTIFIED")
-wkg = eval(input("Weight(kg):     "))
-dist = eval(input("Distance(km):  "))
+int = (input("International (YES / NO): "))
+if int == Y:
+  print("International: TRUE")
+elif int == N:
+  print("International: FALSE")
+else:
+  print(exp,"ANSWER UNIDENTIFIED")
 
-basco = (wkg * 2.50) + (dist * 0.15)
-exp = bool(input("Express (TRUE / FALSE): "))
-int = bool(input("International (TRUE / FALSE): "))
-
-
-if wkg<= 2 and dist<= 100:
-  add = 0.00
-  print("The Shipping is Free")
-elif exp == True and int == True :
-  add = (basco * 1.40) + 50 
-elif exp == True or int == True :
-  add = (basco * 1.20) + 25
-elif wkg>= 30 or dist>= 1000:
-  add = basco + 30
+if wkg<= 2 and dist<= 100: #SHIPPING FREE
+  total1 = 0.00
+  print("\nThe Shipping is Free\nThe Cost of Package: ₱",total1)
+elif exp == Y and int == Y : #INTERNATIONAL AND EXPRESS
+  total2 = (basco * 1.40) + 50
+  print("\nThe Product is Both International & Express\nThe Cost of the Package: ₱",total2)
+elif wkg>= 20 and exp == Y or int == Y : # EXPRESS OR HEAVY INTERNATIONAL
+  total3 = (basco * 1.20) + 25
+  print("\nThe Product is Express or Heavy International\nThe Cost of the Package: ₱",total3) 
+elif wkg>= 30 or dist>= 1000: #OVERSIZED/FAR
+  total4 = basco + 30
+  print("\nThe Product is Oversized/Far\nThe Cost of the Package: ₱",total4)
 else: 
-  print("The base cost of package: ₱",basco)
-  
+  print("\nThe Product Standard Rate: ₱",basco)
