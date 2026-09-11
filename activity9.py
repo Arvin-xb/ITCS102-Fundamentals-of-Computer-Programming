@@ -1,7 +1,7 @@
 # > - greater than
 # < - less than
-# >= 
-# <=
+# >= more than or equal to
+# <= less than or equal to
 # != not equal
 # == equal to
 
