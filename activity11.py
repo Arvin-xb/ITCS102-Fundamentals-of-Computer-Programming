@@ -2,7 +2,7 @@
 import getpass
 
 username = "arvino"
-password = "heehee"
+password = "12345"
 
 
 u = input("Enter Username: ")
