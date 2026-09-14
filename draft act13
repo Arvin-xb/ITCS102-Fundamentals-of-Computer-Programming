@@ -1,0 +1,18 @@
+#nested elif
+
+age = int(input("Enter Your Age:  "))
+is_employed = bool(input("Are you employed? : "))
+credit_score = eval(input("Your Credit Score:  "))
+annual_income = eval(input("Your Annual Income: "))
+has_collateral = bool(input("Do you have any collateral? : "))
+
+if age >= 21 and is_employed == True :
+    print("Accessible")
+    if credit_score >= 750 :
+        print("Base Interest Rate: 5.0% ")
+        if annual_income >= 100000 :
+            print("Final Rate 4.5%")
+            if has_collateral == True:
+                print("Collateral: True")
+else:
+    print("Rejected due to the fail of criteria")
