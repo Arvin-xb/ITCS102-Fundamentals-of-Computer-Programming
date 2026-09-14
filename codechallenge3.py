@@ -34,7 +34,7 @@ if int == Y:
 elif int == N:
   print("International: FALSE")
 else:
-  print(exp,"ANSWER UNIDENTIFIED")
+  print(int,"ANSWER UNIDENTIFIED")
 
 if wkg<= 2 and dist<= 100: #SHIPPING FREE
   total1 = 0.00
