@@ -116,5 +116,31 @@ if age >= 21 and age<= 65 and is_employed == True:
         print("UNRECOGNIZED CONDITION")
 else:
                 print("UNRECOGNIZED CONDITION")
-            
+
+
+
+
+
+age = int(input("Enter Your Age:  "))
+is_employed = bool(input("Are you employed? : "))
+credit_score = eval(input("Your Credit Score:  "))
+annual_income = eval(input("Your Annual Income: "))
+has_collateral = bool(input("Do you have any collateral? : "))
+
+
+if age >= 21 and age <= 65 and is_employed == True:
+    print("Age: Qualified\nEmployed: True
+        if credit_score >= 750:
+            print("Credit Score: ",credit_score,= " Qualified")
+                if annual_income >= 100000:
+                    print("Interest Rate: 4.5%)
+                else:
+                    print("Interest Rate: 5.0%")
+
+        elif credit_score >= 600 and credit_score <750:
+            print("Credit Score:",credit_score,""
+
+
+
+
     
