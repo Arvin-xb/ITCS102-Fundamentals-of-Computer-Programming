@@ -23,7 +23,7 @@ age = int(input("Enter Your Age:  "))
 is_employed = bool(input("Are you employed? (True / False): "))
 credit_score = eval(input("Your Credit Score:  "))
 annual_income = eval(input("Your Annual Income: "))
-has_collateral = bool(input("Do you have any collateral? (True / False ): "))
+has_collateral = bool(input("Do you have any collateral? : "))
 
 
 
