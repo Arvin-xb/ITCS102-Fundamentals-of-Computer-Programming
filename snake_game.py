@@ -1,4 +1,6 @@
-# ============================================================
+
+
+ # ============================================================
 #  SNAKE GAME (pygame)
 #  Arrow keys to move. Eat the food, don't hit yourself.
 #  Run it:  python snake_game.py   (inside your activated venv)
@@ -95,6 +97,7 @@ def draw_game(snake, food, score):
 snake, direction, food, score, grow = new_game()
 game_over = False
 running = True
+high_score = 0
 
 while running:
     # ---- 1. EVENTS: read the keyboard ----
@@ -109,13 +112,13 @@ while running:
                 elif event.key == pygame.K_q:                # Q = quit
                     running = False
             # The "!=" checks stop the snake from turning back into itself
-            elif event.key == pygame.K_UP and direction != (0, 1):
+            elif event.key == (pygame.K_w) and direction != (0, 1): #UP
                 direction = (0, -1)
-            elif event.key == pygame.K_DOWN and direction != (0, -1):
+            elif event.key == (pygame.K_s) and direction != (0, -1): #DOWN
                 direction = (0, 1)
-            elif event.key == pygame.K_LEFT and direction != (1, 0):
+            elif event.key == (pygame.K_a) and direction != (1, 0): #LEFT
                 direction = (-1, 0)
-            elif event.key == pygame.K_RIGHT and direction != (-1, 0):
+            elif event.key == (pygame.K_d) and direction != (-1, 0): #RIGHT
                 direction = (1, 0)
 
     # ---- 2. UPDATE: move the snake and check what happened ----
@@ -134,7 +137,8 @@ while running:
 
         if not game_over:
             snake.insert(0, new_head)                        # add the new head
-            if new_head == food:                             # ate the food
+            if new_head == food:
+                SPEED = SPEED / 2                             # ate the food
                 score = score + POINTS_PER_FOOD
                 grow = grow + GROW_PER_FOOD
                 food = place_food(snake)
@@ -145,6 +149,9 @@ while running:
 
     # ---- 3. DRAW: paint the new frame ----
     draw_game(snake, food, score)
+    if score > high_score:
+        high_score = score
+        draw_text("NEW HIGH SCORE: " + str(high_score), HEIGHT // 2 - 40)
     if game_over:
         draw_text("GAME OVER", HEIGHT // 2 - 40)
         draw_text("Score: " + str(score) + "   R = play again   Q = quit", HEIGHT // 2)
